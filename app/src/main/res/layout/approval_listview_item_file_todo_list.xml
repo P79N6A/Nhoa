@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textColor="@color/textcolor"
+            android:id="@+id/approval_listview_item_tv_subject"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_eff1fd"
+            android:gravity="center"
+            android:maxEms="4"
+            android:padding="@dimen/distance_10dp"
+            android:text=""
+            android:textSize="@dimen/textsize_16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/distance_10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_sign"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_margin="@dimen/distance_20dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/tv_sign"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/distance_5dp"
+                android:text=""
+                android:textColor="@color/textcolor"
+                android:textSize="@dimen/textsize_14sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:hint="请输入"
+                android:id="@+id/et_sign"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:padding="@dimen/distance_5dp"
+                android:text=""
+                android:textColor="@color/textcolor"
+                android:textColorHint="@color/text_hint"
+                android:textCursorDrawable="@drawable/et_bg"
+                android:textSize="@dimen/textsize_14sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/grey_line"
+        android:orientation="vertical" />
+</LinearLayout>

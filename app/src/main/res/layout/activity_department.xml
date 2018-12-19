@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.wisdom.nhoa.homepage.activity.DepartmentActivity">
+
+    <include layout="@layout/head_title_bar"/>
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_30dp"
+        android:layout_marginLeft="@dimen/distance_15dp"
+        android:layout_marginRight="@dimen/distance_15dp"
+        android:layout_marginTop="@dimen/distance_10dp"
+        android:background="@drawable/addressbook_search_bg"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/distance_10dp"
+            android:drawableLeft="@mipmap/search"
+            android:gravity="center"
+            android:text="搜索"/>
+    </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_department"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/distance_10dp"
+            android:paddingLeft="@dimen/distance_15dp">
+
+
+        </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/distance_10dp"
+        android:background="@color/view_bg"/>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ListView
+        android:id="@+id/lv_department"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"/>
+    <TextView
+        android:id="@+id/tv_hint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/distance_20dp"
+        android:gravity="center"
+        android:text="暂无数据"
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/font_size_18sp"
+       android:visibility="gone"
+        />
+</FrameLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/view_bg"/>
+</LinearLayout>

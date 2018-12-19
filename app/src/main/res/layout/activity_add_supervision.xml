@@ -1,0 +1,248 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".supervision.activity.SupervisionDetailActivity">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/head_title_bar"/>
+
+    <LinearLayout
+
+        android:id="@+id/approval_ll_top_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_eff1fd"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_15dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:text="督办名称"
+                android:textColor="@color/textcolor"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_supervision_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_10dp"
+                android:paddingRight="@dimen/distance_10dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:textColor="@color/textcolor"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/grey_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_eff1fd"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_15dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:text="开始时间"
+                android:textColor="@color/textcolor"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_begin_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_10dp"
+                android:paddingRight="@dimen/distance_10dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:textColor="@color/textcolor"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/grey_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_eff1fd"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_15dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:text="结束时间"
+                android:textColor="@color/textcolor"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_end_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_10dp"
+                android:paddingRight="@dimen/distance_10dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:textColor="@color/textcolor"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/grey_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_eff1fd"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_15dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:text="被督办人"
+                android:textColor="@color/textcolor"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_supervised"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_10dp"
+                android:paddingRight="@dimen/distance_10dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:textColor="@color/textcolor"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/grey_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_eff1fd"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_15dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:text="附件"
+                android:textColor="@color/textcolor"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_attachment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_10dp"
+                android:paddingRight="@dimen/distance_10dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:textColor="@color/textcolor"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/grey_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_eff1fd"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_15dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:text="内容"
+                android:textColor="@color/textcolor"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_supervision_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_10dp"
+                android:paddingRight="@dimen/distance_10dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:textColor="@color/textcolor"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bt_select_file"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/grey_line"
+            tools:ignore="Orientation" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_submit_supervision"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/color_647aea"
+        android:text="完成"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_16sp" />
+
+</RelativeLayout>

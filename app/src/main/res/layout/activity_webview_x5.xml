@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_webview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!--<include layout="@layout/head_title_bar"/>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/home_title_bg"
+        >
+
+        <TextView
+            android:textSize="@dimen/title_bar_font_size"
+            android:textColor="@color/white"
+            android:text="政务办公自动化系统"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/img_saoma"
+            android:layout_marginRight="@dimen/distance_5dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/scan"/>
+    </RelativeLayout>
+    <com.tencent.smtt.sdk.WebView
+    android:id="@+id/tencent_webview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  />
+
+
+</LinearLayout>

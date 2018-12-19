@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".meeting_new.activity.ReleaseMeetingMainActivity">
+    <include
+        android:id="@+id/layout_head"
+        layout="@layout/head_title_bar"/>
+
+    <FrameLayout
+        android:layout_above="@+id/bt_apply_meeting_room"
+        android:layout_below="@+id/layout_head"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layout_head">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"/>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <TextView
+            android:id="@+id/tv_no_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="暂无数据,请先申请会议室"
+            android:textSize="@dimen/font_size_18sp"
+            android:visibility="gone"/>
+    </FrameLayout>
+    <Button
+        android:id="@+id/bt_apply_meeting_room"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/color_647aea"
+        android:text="@string/meeting_apply_meeting_room"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_16sp" />
+</RelativeLayout>

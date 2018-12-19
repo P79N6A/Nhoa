@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_60dp"
+    android:layout_marginTop="@dimen/distance_15dp">
+
+    <ImageView
+        android:id="@+id/img_head"
+        android:layout_width="@dimen/height_30dp"
+        android:layout_height="@dimen/height_30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/distance_10dp"
+        android:src="@mipmap/meeting_small" />
+
+    <TextView
+        android:id="@+id/tv_meetingTopic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/distance_10dp"
+        android:layout_marginRight="@dimen/distance_5dp"
+        android:layout_toLeftOf="@+id/img_QRcode"
+        android:layout_toRightOf="@+id/img_head"
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/distance_18dp" />
+
+    <ImageView
+        android:id="@+id/img_QRcode"
+        android:layout_width="@dimen/height_30dp"
+        android:layout_height="@dimen/height_30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/distance_10dp" />
+</RelativeLayout>

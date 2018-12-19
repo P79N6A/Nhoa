@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical"
+              tools:context="com.wisdom.nhoa.mine.activity.ChangePhoneActivity">
+
+    <include layout="@layout/head_title_bar"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mine_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/distance_10dp"
+            android:id="@+id/ll_old_phone_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/distance_35dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/distance_16dp"
+                android:text="原手机号:"
+                android:textColor="@color/mine_some_color"
+                android:textSize="@dimen/distance_16dp"/>
+
+            <TextView
+                android:id="@+id/tv_old_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/distance_16dp"
+                android:inputType="number"
+                android:text="1868584951"
+                android:textColor="@color/mine_some_color"
+                android:textSize="@dimen/distance_16dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/distance_10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/new_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/distance_16dp"
+                android:text="新手机号:"
+                android:textColor="@color/mine_some_color"
+                android:textSize="@dimen/distance_16dp"/>
+
+            <EditText
+                android:id="@+id/et_new_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/distance_30dp"
+                android:layout_marginLeft="@dimen/distance_10dp"
+                android:layout_marginRight="@dimen/distance_16dp"
+                android:background="@drawable/rounded_coners_white"
+                android:inputType="number"
+                android:paddingLeft="@dimen/distance_5dp"
+                android:text=""
+                android:textColor="@color/mine_some_color"
+                android:textSize="@dimen/distance_16dp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/distance_10dp"
+            android:layout_marginBottom="@dimen/distance_10dp"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_verification"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/distance_30dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/distance_16dp"
+                android:gravity="center"
+                android:text="验证码:"
+                android:textColor="@color/mine_some_color"
+                android:textSize="@dimen/distance_16dp"/>
+
+            <EditText
+                android:id="@+id/et_write_verify"
+                android:layout_width="@dimen/width_120dp"
+                android:layout_height="@dimen/distance_30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="25dp"
+                android:layout_toEndOf="@+id/tv_verification"
+                android:background="@drawable/rounded_coners_white"
+                android:inputType="number"
+                android:paddingLeft="@dimen/distance_5dp"
+                android:text=""
+                android:textColor="@color/mine_some_color"
+                android:textSize="@dimen/distance_16dp"/>
+
+
+            <Button
+                android:id="@+id/bt_get_verify"
+                android:layout_width="105dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp"
+                android:layout_marginLeft="@dimen/distance_10dp"
+                android:background="@drawable/bg_bt_get_verification"
+                android:gravity="center"
+                android:padding="@dimen/distance_5dp"
+                android:text="获取验证码"
+                android:textColor="@color/light_blue_new"
+                android:textSize="@dimen/textsize_16sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+    >
+
+    <Button
+        android:id="@+id/bt_change_tel_finish"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/distance_65dp"
+        android:background="@drawable/bg_bt_finish"
+        android:text="完成"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

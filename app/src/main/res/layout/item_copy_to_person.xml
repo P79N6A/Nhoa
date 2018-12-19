@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/distance_50dp">
+
+
+    <ImageView
+        android:id="@+id/iv_checkbox"
+        android:layout_width="16dp"
+        android:layout_height="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/distance_10dp"
+        android:src="@mipmap/checkbox"/>
+
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/distance_15dp"
+        android:layout_toRightOf="@+id/iv_checkbox"
+        android:gravity="center_vertical"
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/textsize_16sp"/>
+
+</RelativeLayout>

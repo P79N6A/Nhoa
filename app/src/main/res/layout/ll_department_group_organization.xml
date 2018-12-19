@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ll_department_total"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/distance_25dp"
+        android:layout_marginRight="@dimen/distance_15dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="@dimen/distance_15dp"
+        android:layout_marginRight="@dimen/distance_15dp"
+        android:orientation="vertical"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_department"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/distance_10dp"
+            android:layout_marginLeft="@dimen/distance_15dp"
+            android:layout_marginRight="@dimen/distance_15dp"
+            android:layout_marginTop="@dimen/distance_15dp"
+            android:drawableLeft="@mipmap/icon_form"
+            android:drawablePadding="@dimen/distance_10dp"
+            android:text="组织架构"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/textsize_16sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/view_bg" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/distance_10dp"
+        android:layout_marginLeft="@dimen/distance_15dp"
+        android:layout_marginRight="@dimen/distance_15dp"
+        android:layout_marginTop="@dimen/distance_15dp"
+        android:text="常用联系人"
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/textsize_16sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/view_bg" />
+</LinearLayout>

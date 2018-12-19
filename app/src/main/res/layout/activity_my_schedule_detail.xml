@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/top_l"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/head_title_bar"></include>
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="90dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:background="@color/color_eff1fd"-->
+                    <!--android:gravity="left|center_vertical"-->
+                    <!--android:paddingBottom="@dimen/distance_10dp"-->
+                    <!--android:paddingLeft="@dimen/distance_15dp"-->
+                    <!--android:paddingTop="@dimen/distance_10dp"-->
+                    <!--android:text="来        源"-->
+                    <!--android:textColor="@color/textcolor"-->
+                    <!--android:textSize="16sp"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@null"-->
+                    <!--android:gravity="left|center_vertical"-->
+                    <!--android:paddingBottom="@dimen/distance_10dp"-->
+                    <!--android:paddingLeft="@dimen/distance_10dp"-->
+                    <!--android:paddingRight="@dimen/distance_10dp"-->
+                    <!--android:paddingTop="@dimen/distance_10dp"-->
+                    <!--android:text="我的日程"-->
+                    <!--android:textColor="@color/textcolor"-->
+                    <!--android:textSize="16sp"/>-->
+            <!--</LinearLayout>-->
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1.5dp"-->
+                <!--android:background="@color/grey_line"/>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_eff1fd"
+                    android:gravity="left|center_vertical"
+                    android:paddingBottom="@dimen/distance_10dp"
+                    android:paddingLeft="@dimen/distance_15dp"
+                    android:paddingTop="@dimen/distance_10dp"
+                    android:text="日程类型"
+                    android:textColor="@color/textcolor"
+                    android:textSize="16sp"/>
+                <ImageView
+                    android:id="@+id/calendar_type_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/distance_10dp"
+                    android:background="@drawable/calendar_type_color"/>
+                <TextView
+                    android:id="@+id/et_schedule_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="left|center_vertical"
+                    android:paddingBottom="@dimen/distance_10dp"
+                    android:paddingLeft="@dimen/distance_10dp"
+                    android:paddingRight="@dimen/distance_10dp"
+                    android:paddingTop="@dimen/distance_10dp"
+                    android:text="我的日程"
+                    android:textColor="@color/textcolor"
+                    android:drawableRight="@mipmap/icon_pickup"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="@color/grey_line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_eff1fd"
+                    android:gravity="left|top"
+                    android:paddingBottom="@dimen/distance_10dp"
+                    android:paddingLeft="@dimen/distance_15dp"
+                    android:paddingTop="@dimen/distance_10dp"
+                    android:text="标        题"
+                    android:textColor="@color/textcolor"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/et_schedule_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="left|center_vertical"
+                    android:paddingBottom="@dimen/distance_10dp"
+                    android:paddingLeft="@dimen/distance_10dp"
+                    android:paddingRight="@dimen/distance_10dp"
+                    android:paddingTop="@dimen/distance_10dp"
+                    android:text=""
+                    android:textColor="@color/textcolor"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="@color/grey_line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_eff1fd"
+                    android:gravity="left|top"
+                    android:paddingBottom="@dimen/distance_10dp"
+                    android:paddingLeft="@dimen/distance_15dp"
+                    android:paddingTop="@dimen/distance_10dp"
+                    android:text="位        置"
+                    android:textColor="@color/textcolor"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/et_schedule_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="left|center_vertical"
+                    android:paddingBottom="@dimen/distance_10dp"
+                    android:paddingLeft="@dimen/distance_10dp"
+                    android:paddingRight="@dimen/distance_10dp"
+                    android:paddingTop="@dimen/distance_10dp"
+                    android:text=""
+                    android:textColor="@color/textcolor"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="@color/grey_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_eff1fd"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_15dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:text="开始时间"
+                android:textColor="@color/textcolor"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_event_starttime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_10dp"
+                android:paddingRight="@dimen/distance_10dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:text="18:58"
+                android:drawableRight="@mipmap/icon_pickup"
+                android:textColor="@color/textcolor"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/grey_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_eff1fd"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_15dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:text="结束时间"
+                android:textColor="@color/textcolor"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_event_endtime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_10dp"
+                android:paddingRight="@dimen/distance_10dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:singleLine="true"
+                android:text="19:58"
+                android:drawableRight="@mipmap/icon_pickup"
+                android:textColor="@color/textcolor"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/grey_line"/>
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="90dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@color/color_eff1fd"-->
+                <!--android:gravity="left|center_vertical"-->
+                <!--android:paddingBottom="@dimen/distance_10dp"-->
+                <!--android:paddingLeft="@dimen/distance_15dp"-->
+                <!--android:paddingTop="@dimen/distance_10dp"-->
+                <!--android:text="日程内容"-->
+                <!--android:textColor="@color/textcolor"-->
+                <!--android:textSize="16sp"/>-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/et_event_content"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="left|center_vertical"-->
+                <!--android:paddingBottom="@dimen/distance_10dp"-->
+                <!--android:paddingLeft="@dimen/distance_10dp"-->
+                <!--android:paddingRight="@dimen/distance_10dp"-->
+                <!--android:paddingTop="@dimen/distance_10dp"-->
+                <!--android:background="@null"-->
+                <!--android:text=""-->
+                <!--android:textColor="@color/textcolor"-->
+                <!--android:textSize="16sp"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1.5dp"-->
+            <!--android:background="@color/grey_line"/>-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textallday"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_eff1fd"
+                    android:gravity="left|center_vertical"
+                    android:paddingBottom="@dimen/distance_10dp"
+                    android:paddingLeft="@dimen/distance_15dp"
+                    android:paddingTop="@dimen/distance_10dp"
+                    android:text="是否全天"
+                    android:textColor="@color/textcolor"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_is_all_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/distance_10dp"
+                    android:paddingLeft="@dimen/distance_10dp"
+                    android:paddingRight="@dimen/distance_10dp"
+                    android:paddingTop="@dimen/distance_10dp"
+                    android:layout_toRightOf="@id/textallday"
+                    android:text="是"
+                    android:textColor="@color/textcolor"
+                    android:textSize="16sp" />
+
+                <Switch
+                    android:id="@+id/schedule_allday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingBottom="@dimen/distance_10dp"
+                    android:paddingLeft="@dimen/distance_10dp"
+                    android:paddingRight="@dimen/distance_10dp"
+                    android:paddingTop="@dimen/distance_10dp"
+                    android:layout_alignParentRight="true"
+                    android:showText="false"
+
+
+                    />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="@color/grey_line"/>
+    </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/edit_schedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_bt_finish"
+        android:textColor="@color/white"
+        style="?android:attr/borderlessButtonStyle"
+        android:text="修改" />
+
+
+</RelativeLayout>

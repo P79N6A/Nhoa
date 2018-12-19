@@ -1,0 +1,287 @@
+<resources>
+    <string name="app_name">政务OA系统</string>
+    <string name="net_wrok_unconnetion_text">网络连接失败</string>
+    <string name="camera_hint">请扫描会议签到二维码，进行签到</string>
+    <string name="camera_hint2">请扫描网站登录二维码，进行登录</string>
+
+    <string name="tab_homepage">主页</string>
+    <string name="tab_addressbook">通讯录</string>
+    <string name="tab_mine">我的</string>
+    <string name="tab_msg">消息</string>
+    <string name="permission_fail_hint">获取权限失败</string>
+
+
+    <string name="index_sp">审批</string>
+    <string name="index_fw">发文</string>
+    <string name="index_gg">公告</string>
+    <string name="index_qd">签到</string>
+    <string name="index_hy">会议</string>
+    <string name="index_rc">日程</string>
+    <string name="index_gzrz">工作日志</string>
+    <string name="index_yyth">语音通话</string>
+    <string name="index_spth">视频通话</string>
+    <!--新版本首页资源文件-->
+    <string name="index_todo">待办</string>
+    <string name="index_tocheck">待审</string>
+    <string name="index_toread">待阅</string>
+    <string name="index_drafts">草稿箱</string>
+
+    <string name="index_issued_management">发文管理</string>
+    <string name="index_incoming_message_management">收文管理</string>
+    <string name="index_announcement">公告</string>
+    <string name="index_documents_issuing">公文传阅</string>
+    <string name="index_meeting">会议</string>
+    <string name="index_approval">审批</string>
+    <string name="index_schedule">日程</string>
+    <string name="index_watch">督办</string>
+    <!--通讯录-->
+    <string name="contacts_my_groups">我的群组</string>
+    <string name="contacts_create_group">创建群组</string>
+    <!--我的-->
+    <string name="mine_update_phone">修改手机</string>
+    <string name="mine_update_psw">修改密码</string>
+    <string name="mine_about">关于</string>
+    <string name="mine_logout">退出</string>
+    <string name="mine_title">我的</string>
+    <!--审批-->
+    <string name="approval_title">审批</string>
+    <string name="approval_my_sponsor">我发起的</string>
+    <string name="approval_my_approval">我审批的</string>
+    <string name="approval_my_copy_to">抄送我的</string>
+    <string name="approval_on_business_trip">出差</string>
+    <string name="approval_ask_for_leave">请假</string>
+    <string name="approval_office_stuff">办公用品</string>
+    <string name="approval_become_a_full_member">转正</string>
+    <string name="approval_attendance_and_vacation">出勤休假</string>
+    <!--登录相关-->
+    <string name="mine_login_btn">登  录</string>
+    <string name="mine_login_account">账号</string>
+    <string name="mine_login_psw">密码</string>
+    <string name="mine_login_psw_hint">请输入密码</string>
+    <string name="mine_login_account_hint">请输入账号</string>
+    <!--发文管理-->
+    <string name="approval_issue_management_title">发文管理</string>
+    <string name="approval_issue">发文</string>
+    <string name="approval_receive_issue">收文</string>
+    <string name="approval_issue_todo">发文待办</string>
+    <string name="approval_issue_check">发文查阅</string>
+    <string name="approval_issue_my_approval">我审批的</string>
+    <!--代办公文-->
+    <string name="approval_approval_todo_file_num">文号</string>
+    <string name="approval_approval_todo_file_title">公文标题</string>
+    <string name="approval_approval_todo_file_process">工作流程</string>
+    <string name="approval_approval_todo_file_author">拟稿人</string>
+    <string name="approval_approval_todo_file_date">创建时间</string>
+    <string name="approval_approval_todo_file_state">公文状态</string>
+
+    <string name="approval_approval_todo_file_todo_list">文件处理</string>
+    <string name="approval_approval_todo_file_content">公文正文</string>
+    <string name="approval_approval_todo_file_attach">附件材料</string>
+    <string name="approval_approval_todo_title">待办公文</string>
+    <string name="approval_approval_todo_reject">驳回</string>
+    <string name="approval_approval_todo_alter">修改</string>
+    <string name="approval_approval_todo_sign">签字</string>
+    <string name="approval_approval_todo_send">发送</string>
+    <string name="approval_approval_todo_finish">办结</string>
+
+    <string name="approval_approval_todo_attach_file_name">文档名称：</string>
+    <string name="approval_approval_todo_attach_upload_time">上传时间：</string>
+    <string name="approval_approval_todo_attach_upload_author">上传人：</string>
+    <string name="approval_approval_todo_attach_delete">删除</string>
+    <string name="approval_approval_todo_attach_preview">预览</string>
+
+    <string name="approval_refuse_issuse_hint">您是否要驳回此公文？</string>
+    <string name="approval_alter_issuse_hint">您是否要修改此公文？</string>
+    <string name="approval_refuse_issuse_hint2">请输入您的意见建议……</string>
+    <string name="approval_refuse_issuse_cancel">取消</string>
+    <string name="approval_refuse_issuse_confirm">确定</string>
+
+    <string name="approval_sign_complete">完成</string>
+    <string name="approval_sign_rewrite">重写</string>
+
+    <!--会议-->
+    <string name="index_meeting_meeting_theme">会议主题</string>
+    <string name="index_meeting_convoke_department">发起部门</string>
+    <string name="index_meeting_room">会议室</string>
+    <string name="index_meeting_compere">主持人</string>
+    <string name="index_meeting_participants">参会人员</string>
+    <string name="index_meeting_start_time">开始时间</string>
+    <string name="index_meeting_end_time">结束时间</string>
+    <string name="index_meeting_current_state">当前状态</string>
+    <string name="index_meeting_meeting_content">会议内容</string>
+    <string name="index_meeting_complete">完成</string>
+    <string name="index_meeting_createMeeting">创建会议</string>
+    <string name="index_meeting_checkin_staff">签到人员</string>
+    <string name="index_meeting_ending_meeting">结束会议</string>
+    <string name="index_meeting_checkin">签到</string>
+    <string name="index_meeting_participant_title">选择参会人员</string>
+    <string name="index_meeting_title">会议</string>
+    <string name="index_meeting_detail_title">会议详情</string>
+    <string name="index_meeting_signin_user">签到人员</string>
+    <string name="index_meeting_qrcode_hint">贯彻习近平新时代社会主义核心价值观</string>
+    <string name="index_meeting_meeting_manage">会议管理</string>
+    <string name="index_meeting_create_time">创建时间</string>
+    <string name="index_meeting_signin">确定签到？</string>
+    <string name="index_meeting_over_meeting">确定结束会议？</string>
+    <string name="meeting_my_sponsor">我发起的</string>
+    <string name="meeting_my_check">我审核的</string>
+    <string name="meeting_my_participation">我参与的</string>
+    <string name="meeting_apply_meeting_room">申请会议室</string>
+    <string name="meeting_publish_meeting">发布会议</string>
+    <string name="meeting_sign_meeting">会议签到</string>
+    <string name="meeting_participate_num">人员数量</string>
+    <string name="meeting_apply_time">申请时间</string>
+    <string name="meeting_check_state">审批状态</string>
+    <string name="meeting_apply_delete">删除</string>
+    <string name="meeting_apply_edit">编辑</string>
+    <string name="meeting_apply_detail_title">会议室申请详情</string>
+    <string name="meeting_small_title">会议申请与发布</string>
+    <string name="meeting_apply_complete">完    成</string>
+    <string name="meeting_apply_edit_title">编辑会议室信息</string>
+    <string name="meeting_apply_title">申请会议室</string>
+    <string name="meeting_apply_apply">申    请</string>
+    <string name="meeting_set_up_time">发起时间</string>
+    <string name="meeting_publish_subject">议题名称</string>
+    <string name="meeting_publish_person">议题人员</string>
+    <string name="meeting_publish_attach">议题附件</string>
+    <string name="meeting_publish_add_attach">添加附件</string>
+    <string name="meeting_publish_title">发布会议</string>
+    <string name="meeting_publish_compere_hint">请输入主持人信息</string>
+    <string name="meeting_publish_contect_hint">请输入联系人信息</string>
+    <string name="meeting_publish_contect_phone_hint">请输入联系人电话</string>
+    <string name="meeting_publish_record_hint">请输入记录人员信息</string>
+    <string name="meeting_contect_person">联系人</string>
+    <string name="meeting_record_person">记录人</string>
+    <string name="meeting_readed_person">已收悉人员</string>
+    <string name="meeting_unreaded_person">未收悉人员</string>
+    <string name="meeting_contect_person_phone">联系电话</string>
+    <string name="meeting_room_detail_hint_return">请点击下方编辑按钮进行编辑，可重新进行审核</string>
+    <string name="meeting_room_detail_hint_pass">审批通过，请点击这里直接发布该会议</string>
+
+
+    <!--公告-->
+    <string name="notice_title">公告</string>
+    <string name="notice_detailed_title">公告信息</string>
+    <string name="change_phone_title">修改手机</string>
+    <string name="change_password">修改密码</string>
+    <string name="department_title">厅局</string>
+    <string name="section_title">部门</string>
+    <string name="staff_title">人员</string>
+    <string name="circulated_title">公文传阅</string>
+    <string name="circulated_create_group">创建群</string>
+    <string name="circulated_create_group2">创建公文传阅组</string>
+    <string name="circulated_group_name">群名称</string>
+    <string name="circulated_group_notic">群公告</string>
+
+    <string name="circulated_group_name_hint">请完善群名称</string>
+    <string name="circulated_group_notice_hint">请完善群公告</string>
+    <string name="circulated_group_staff_hint">暂无可选成员</string>
+    <string name="circulated_group_staff_hint2">请至少选择一名群成员</string>
+    <string name="circulated_conversation_upload">上传</string>
+
+    <string name="circulated_download_show_title">下载</string>
+    <string name="circulated_group_management_title">群管理</string>
+
+    <string name="sendreceive_receive_todo">收文待办</string>
+    <string name="sendreceive_receive_check">收文查阅</string>
+    <string name="sendreceive_receive_sponsor">我发起的</string>
+    <string name="sendreceive_receive_approval">我审批的</string>
+    <string name="sendreceive_receive_management_title">收文管理</string>
+    <string name="sendreceive_receive_no_file">暂无公文正文</string>
+    <string name="sendreceive_receive_no_accessory">暂无附件</string>
+    <string name="sendreceive_confirm">确定</string>
+
+
+    <string name="sendreceive_receive_reason_hint">驳回原因不能为空</string>
+    <string name="sendreceive_receive_suggestion_hint">意见建议不能为空</string>
+    <string name="sendreceive_receive_reason_success_hint">提交成功</string>
+    <string name="cancle">取消</string>
+    <string name="title">请选择时间</string>
+    <string name="commit">确定</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="hour">时</string>
+    <string name="minute">分</string>
+    <string name="select_date">选择日期</string>
+    <string name="current_date">当前日期</string>
+    <string name="select_time">选择时间</string>
+    <string name="current_time">当前时间</string>
+    <string name="title_activity_send_issue_sponsor_detail">SendIssueSponsorDetailActivity</string>
+    <!--审批相关-->
+    <string name="approval_list_title">我发起的</string>
+    <string name="approval_checkto">待审</string>
+    <string name="approval_list_item_type">类型</string>
+    <string name="approval_list_item_state">状态</string>
+    <string name="approval_list_item_time">申请时间</string>
+    <string name="approval_list_item_person">审批人</string>
+    <string name="approval_mt_approval_list_title">我审批的</string>
+
+    <!--上拉刷新-->
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="release_to_refresh">释放立即刷新</string>
+    <string name="refreshing">正在刷新...</string>
+    <string name="refresh_succeed">刷新成功</string>
+    <string name="refresh_fail">刷新失败</string>
+    <string name="pullup_to_load">上拉加载更多</string>
+    <string name="release_to_load">释放立即加载</string>
+    <string name="loading">正在加载...</string>
+    <string name="load_succeed">加载成功</string>
+    <string name="load_fail">加载失败</string>
+    <string name="title_activity_apply_modify">ApplyModifyActivity</string>
+
+
+    <!--请假-->
+    <string name="leave_apply_of_leave">申请休假</string>
+    <string name="leave_start_time">起始时间</string>
+    <string name="leave_end_time">结束时间</string>
+    <string name="leave_leave_type">休假类型</string>
+    <string name="leave_leave_day">休假天数</string>
+    <string name="leave_leave_reason">休假理由</string>
+    <string name="leave_approver">审批人</string>
+    <string name="copy_to">抄送人</string>
+    <string name="leave_remark">备注</string>
+    <string name="leave_accessory">附件</string>
+
+    <!--办公用品-->
+    <string name="office_stuff_stuff">物品</string>
+    <string name="office_stuff_stuff_hint">请选择物品</string>
+    <string name="office_stuff_num">申请数</string>
+    <string name="office_stuff_num_hint">请填写申请数</string>
+    <string name="office_stuff_num_wrong_hint">申请数大于库存量，请重新填写</string>
+    <string name="office_stuff_reason">申请理由</string>
+    <string name="office_stuff_reason_hint">请填写申请理由</string>
+    <string name="office_stuff_person">审批人</string>
+    <string name="office_stuff_person_hint">请选择审批人</string>
+    <string name="office_stuff_remark">备注</string>
+    <string name="office_stuff_remark_hint">请填写备注</string>
+    <string name="office_stuff_title">办公用品</string>
+
+
+    <string name="title_activity_business_trip">BusinessTripActivity</string>
+    <!--出差-->
+    <string name="apply_of_business_trip">申请出差</string>
+    <string name="business_trip_addr">出差地点</string>
+    <string name="business_trip_vehicle">出差工具</string>
+    <string name="business_trip_day">出差天数</string>
+    <string name="business_trip_reason">出差理由</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_supervision">SupervisionActivity</string>
+
+    <string name="superversion_feed_back_percent">完成度</string>
+    <string name="superversion_feed_back_content">反馈内容</string>
+    <string name="superversion_feed_back_during_time">起止时间</string>
+    <string name="superversion_feed_back_end_time">结束时间</string>
+    <string name="superversion_feed_back_start_time">开始时间</string>
+    <string name="superversion_superversion_name">督办名称</string>
+    <string name="superversion_feed_back_title">反馈信息</string>
+    <string name="superversion_add_feed_back_title">督办信息反馈</string>
+    <string name="superversion_add_feed_back_hint1">反馈进度不能为空</string>
+    <string name="superversion_add_feed_back_hint3">反馈进度不能大于100</string>
+    <string name="superversion_add_feed_back_hint2">反馈内容不能为空</string>
+    <string name="superversion_person">被督办人</string>
+
+
+</resources>

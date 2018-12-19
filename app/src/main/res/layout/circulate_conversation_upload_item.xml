@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/circulated_conversation_tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/distance_10dp"
+        android:gravity="center_horizontal"
+        android:text="12:00:00"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/font_size_14sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/circulated_conversation_rl_right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/distance_10dp">
+
+            <ImageView
+                android:id="@+id/circulated_conversation_iv_head2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/avatar_me_default" />
+            <LinearLayout
+                android:id="@+id/circulated_ll_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/distance_5dp"
+                android:background="@drawable/shape_circle_corner_small_bg_grey"
+                android:orientation="vertical"
+                android:layout_marginRight="@dimen/distance_5dp"
+                android:layout_toLeftOf="@+id/circulated_conversation_iv_head2"
+                android:padding="@dimen/padding_8dp">
+
+                <TextView
+                    android:id="@+id/circulated_conversation_tv_filename_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/distance_10dp"
+                    android:drawableLeft="@mipmap/icon_file"
+                    android:text="省政府"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/font_size_14sp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/circulated_conversation_tv_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/distance_10dp"
+                android:text="上传中……"
+                android:layout_below="@+id/circulated_ll_right"
+                android:layout_toLeftOf="@+id/circulated_conversation_iv_head2"
+                android:textColor="@color/textcolor"
+                android:layout_marginTop="@dimen/padding_8dp"
+                android:textSize="@dimen/font_size_14sp" />
+
+        </RelativeLayout>
+
+
+
+    </FrameLayout>
+
+</LinearLayout>

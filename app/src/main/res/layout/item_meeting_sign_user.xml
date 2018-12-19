@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_10dp"
+                android:paddingRight="@dimen/distance_10dp">
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/distance_10dp"
+        android:text="用户名"
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/font_size_18sp"/>
+
+
+    <TextView
+        android:id="@+id/tv_role_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_username"
+        android:layout_marginTop="@dimen/distance_5dp"
+        android:text="部长"
+        android:textColor="@color/item_textcolor"
+        android:textSize="@dimen/font_size_15sp"/>
+
+    <TextView
+        android:id="@+id/tv_department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_username"
+        android:layout_marginTop="@dimen/distance_5dp"
+        android:text="发改委"
+        android:textColor="@color/item_textcolor"
+        android:textSize="@dimen/font_size_15sp"/>
+</RelativeLayout>

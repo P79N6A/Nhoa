@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_file_display"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_title_bar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.wisdom.nhoa.widget.fileview.SuperFileView2
+            android:id="@+id/mSuperFileView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_preview_hint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/distance_15dp"
+            android:layout_marginRight="@dimen/distance_15dp"
+            android:gravity="center"
+            android:text="暂不支持预览此格式的文件"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/font_size_18sp"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

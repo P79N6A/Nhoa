@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/distance_10dp"
+        android:layout_marginBottom="@dimen/distance_5dp"
+        android:layout_marginLeft="@dimen/distance_10dp"
+        android:layout_marginRight="@dimen/distance_10dp"
+        android:layout_marginTop="@dimen/distance_5dp"
+        android:background="@drawable/shape_relativelayout_circle_corner"
+        android:paddingLeft="@dimen/distance_5dp"
+        android:paddingRight="@dimen/distance_5dp">
+
+        <TextView
+            android:id="@+id/approval_todo_attach_file_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/distance_15dp"
+            android:layout_marginTop="@dimen/distance_15dp"
+            android:text="@string/approval_approval_todo_attach_file_name"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/textsize_16sp"/>
+
+        <TextView
+            android:id="@+id/approval_todo_attach_tv_file_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/distance_15dp"
+            android:layout_toRightOf="@+id/approval_todo_attach_file_name1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/textsize_16sp"/>
+
+        <TextView
+            android:id="@+id/approval_todo_attach_upload_time1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/approval_todo_attach_file_name1"
+            android:layout_marginLeft="@dimen/distance_15dp"
+            android:layout_marginTop="@dimen/distance_15dp"
+            android:text="@string/approval_approval_todo_attach_upload_time"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/textsize_16sp"/>
+
+        <TextView
+            android:id="@+id/approval_todo_attach_tv_upload_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/approval_todo_attach_file_name1"
+            android:layout_marginTop="@dimen/distance_15dp"
+            android:layout_toRightOf="@+id/approval_todo_attach_upload_time1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/textsize_16sp"/>
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/approval_todo_attach_upload_author1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/approval_todo_attach_upload_time1"
+            android:layout_marginLeft="@dimen/distance_15dp"
+            android:layout_marginTop="@dimen/distance_15dp"
+            android:text="@string/approval_approval_todo_attach_upload_author"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/textsize_16sp"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/approval_todo_attach_tv_upload_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/approval_todo_attach_upload_time1"
+            android:layout_marginTop="@dimen/distance_15dp"
+            android:layout_toRightOf="@+id/approval_todo_attach_upload_author1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/textsize_16sp"/>
+
+        <Button
+            android:id="@+id/approval_todo_attach_btn_preview"
+            android:layout_width="@dimen/width_80dp"
+            android:layout_height="@dimen/height_30dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/approval_todo_attach_tv_upload_author"
+            android:layout_marginRight="@dimen/distance_15dp"
+            android:background="@drawable/shape_btn_circle_corner_blue"
+            android:text="@string/approval_approval_todo_attach_preview"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_15sp"
+            />
+
+        <Button
+            android:id="@+id/approval_todo_attach_btn_delete"
+            android:layout_width="@dimen/width_80dp"
+            android:layout_height="@dimen/height_30dp"
+            android:layout_below="@+id/approval_todo_attach_tv_upload_author"
+            android:layout_marginRight="@dimen/distance_15dp"
+            android:layout_toLeftOf="@+id/approval_todo_attach_btn_preview"
+            android:background="@drawable/shape_btn_circle_corner_orange"
+            android:text="@string/approval_approval_todo_attach_delete"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_15sp"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+</LinearLayout>

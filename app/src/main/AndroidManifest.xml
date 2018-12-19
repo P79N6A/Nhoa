@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wisdom.nhoa">
+
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- check here -->
+    <uses-feature android:name="android.hardware.camera.flash" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 允许程序获取网络状态 -->
+    <!-- 允许程序访问WiFi网络信息 -->
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- Push service 运行需要的权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 富媒体需要声明的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!-- 适配Android N系统必需的ContentProvider写权限声明，写权限包含应用包名 -->
+    <uses-permission android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.wisdom.nhoa" />
+
+    <permission
+        android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.wisdom.nhoa"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:name=".AppApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- push service start -->
+        <!-- 用于接收系统消息以保证PushService正常运行 -->
+        <receiver
+            android:name="com.baidu.android.pushservice.PushServiceReceiver"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
+                <!-- 以下四项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <!-- Push服务接收客户端发送的各种请求 -->
+        <receiver
+            android:name="com.baidu.android.pushservice.RegistrationReceiver"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD" />
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.baidu.android.pushservice.PushService"
+            android:exported="true"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" />
+            </intent-filter>
+        </service>
+
+        <!-- 4.4版本新增的CommandService声明，提升小米和魅族手机上的实际推送到达率 -->
+        <service
+            android:name="com.baidu.android.pushservice.CommandService"
+            android:exported="true" />
+
+        <!-- 适配Android N系统必需的ContentProvider声明，写权限包含应用包名 -->
+        <provider
+            android:name="com.baidu.android.pushservice.PushInfoProvider"
+            android:authorities="com.wisdom.nhoa.bdpush"
+            android:exported="true"
+            android:protectionLevel="signature"
+            android:writePermission="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.wisdom.nhoa" />
+        <!-- push结束 -->
+        <!-- 此处Receiver名字修改为当前包名路径 -->
+        <receiver android:name=".push.PushReceiver">
+            <intent-filter android:priority="1000">
+
+                <!-- 以下四项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <!-- 接收push消息 -->
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
+                <!-- 接收bind、setTags等method的返回结果 -->
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
+                <!-- 接收通知点击事件，和通知自定义内容 -->
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
+            </intent-filter>
+        </receiver>
+        <!-- 自定义接收push消息结束 -->
+        <!-- 相机权限 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.wisdom.nhoa.myprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_xml" />
+        </provider>
+        <!-- 首页 -->
+        <activity
+            android:name=".mine.activity.LoginActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <!-- <data -->
+                <!-- android:host="com.wisdom.nhoa" -->
+                <!-- android:scheme="mainpage" /> -->
+                <!-- <action android:name="android.intent.action.VIEW" /> -->
+                <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 二维码扫描页面 -->
+        <activity
+            android:name=".widget.qrcode.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 腾讯TBS word预览功能页面 -->
+        <activity
+            android:name=".widget.fileview.FileDisplayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".homepage.activity.WebViewActivityX5"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".widget.fileview.PreviwPicActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".base.FaWenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 首页待阅 -->
+        <activity
+            android:name=".homepage.activity.ToBeReadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 审批页面 -->
+        <activity
+            android:name=".approval.activity.ApprovalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 发文管理页面 -->
+        <activity
+            android:name=".sendreceive.activity.SendManagementActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".homepage.activity.HomePageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 发文待办页面 -->
+        <activity
+            android:name=".sendreceive.activity.SendIssueTodoListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".approval.activity.BacklogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 代办公文activity -->
+        <activity
+            android:name=".sendreceive.activity.SendIssueTodoDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 创建会议activity -->
+        <activity
+            android:name=".metting.activity.CreateMeetingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 公告activity -->
+        <activity
+            android:name=".homepage.activity.NoticeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 会议activity -->
+        <activity
+            android:name=".metting.activity.MeetingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 会议详情activity -->
+        <activity
+            android:name=".metting.activity.MeetingDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 厅局列表 -->
+        <activity
+            android:name=".contacts.activity.DepartmentListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 部门列表 -->
+        <activity
+            android:name=".contacts.activity.SectionListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 人员列表 -->
+        <activity
+            android:name=".contacts.activity.StaffListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 公文传阅列表页 -->
+        <activity
+            android:name=".circulated.activity.DocumentCirculatedListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".meeting_new.activity.ParticipantActivity" />
+        <!-- 公告详细 -->
+        <activity
+            android:name=".homepage.activity.NoticeDetailedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 公文传阅对话页面 -->
+        <activity
+            android:name=".circulated.activity.CirculateConversationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 公文传阅 附件预览 -->
+        <activity
+            android:name=".circulated.activity.FilePreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 公文传阅 详情页面 -->
+        <activity
+            android:name=".circulated.activity.DocumentReadDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 公文传阅 群管理 -->
+        <activity
+            android:name=".circulated.activity.GroupManagementActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 创建群页面 -->
+        <activity
+            android:name=".circulated.activity.CreateGroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 收文管理 -->
+        <activity
+            android:name=".sendreceive.activity.ReceiveIssuedManagmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 收文代办 -->
+        <activity
+            android:name=".sendreceive.activity.ReceiveIssueTodoListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 收文查阅 -->
+        <activity
+            android:name=".sendreceive.activity.ReceiveIssueCheckListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 收文，我发起的 -->
+        <activity
+            android:name=".sendreceive.activity.ReceiveIssueSponsorListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 收文，我审批的 -->
+        <activity
+            android:name=".sendreceive.activity.ReceiveIssueApprovalListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 收文，我的发起详情页 -->
+        <activity
+            android:name=".sendreceive.activity.ReceiveIssueSponsorDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 收文，我的审批详情页 -->
+        <activity
+            android:name=".sendreceive.activity.ReceiveIssueApprovalDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 收文，代办详情页 -->
+        <activity
+            android:name=".sendreceive.activity.ReceiveIssueTodoDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 收文，查阅详情页 -->
+        <activity
+            android:name=".sendreceive.activity.ReceiveIssueCheckDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- 修改手机 -->
+        <activity
+            android:name=".mine.activity.ChangePhoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 修改修改密码 -->
+        <activity
+            android:name=".mine.activity.ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 确认修改密码 -->
+        <activity
+            android:name=".mine.activity.ConfirmChangeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".contacts.activity.SearchContactsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 二维码详情 -->
+        <activity
+            android:name=".homepage.activity.QRcodeDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 进入日程页面 -->
+        <activity
+            android:name=".homepage.activity.CalendarSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- 提交事件 -->
+        <activity
+            android:name=".homepage.activity.CalendarEventActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 获取节点 -->
+        <!-- 获取人员 -->
+        <activity
+            android:name=".sendreceive.activity.SendGetPersonActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 发文我发起的 -->
+        <activity
+            android:name=".sendreceive.activity.SendIssueSponsorListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 会议签到人员 -->
+        <activity
+            android:name=".metting.activity.MeetingSignUserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 待阅读详情 -->
+        <activity
+            android:name=".homepage.activity.ToBeReadDetailedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 发文我发起的详情 -->
+        <activity
+            android:name=".sendreceive.activity.SendIssueSponsorDetailActivity"
+            android:label="@string/title_activity_send_issue_sponsor_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 手写板页面 新版本的 -->
+        <activity
+            android:name=".sendreceive.activity.WritePadActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:theme="@style/translucent" />
+        <!-- 发文我审批的列表 -->
+        <activity
+            android:name=".sendreceive.activity.SendIssueApprovalListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 发文查阅列表 -->
+        <activity
+            android:name=".sendreceive.activity.SendIssueCheckListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 发文查阅 -->
+        <activity
+            android:name=".sendreceive.activity.SendIssueCheckDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 发文我审批的详情 -->
+        <activity
+            android:name=".sendreceive.activity.SendIssueApprovalDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 草稿 -->
+        <activity
+            android:name=".homepage.activity.DraftActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 关于 -->
+        <activity
+            android:name=".mine.activity.AboutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 待办 -->
+        <activity
+            android:name=".sendreceive.activity.BacklogTabActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 发送到下一环节页面。可能会有办结功能 -->
+        <activity
+            android:name=".sendreceive.activity.SendToNextActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 会议扫码之后得到返回结果并 签到 的展示 -->
+        <activity
+            android:name=".metting.activity.MeetingScanResultActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/translucent" />
+
+        <!-- 添加请假 -->
+        <activity
+            android:name=".approval.activity.ApplyModifyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 我的审批列表页面 -->
+        <activity
+            android:name=".approval.activity.MyApprovalListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 我发起的 我审批的详情页面 -->
+        <activity
+            android:name=".approval.activity.MySponsorDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- 审批列表页面 -->
+        <activity
+            android:name=".approval.activity.ApprovalListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 请假审批列表 -->
+        <activity
+            android:name=".approval.activity.LeaveApproveActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 添加出差申请 -->
+        <activity
+            android:name=".approval.activity.BusinessTripActivity"
+            android:label="@string/title_activity_business_trip"
+            android:theme="@style/AppTheme" />
+        <!-- 添加办公用品 -->
+        <activity
+            android:name=".approval.activity.AddOfficeStuffActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 添加办公用品 -->
+        <activity
+            android:name=".homepage.activity.ScheduleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 我的日程详细 -->
+        <activity
+            android:name=".homepage.activity.MyScheduleDetailActivity"
+            android:screenOrientation="portrait" />
+        <!-- 编辑我的日程 -->
+        <activity
+            android:name=".homepage.activity.UpdataScheduleEventActivity"
+            android:screenOrientation="portrait" />
+        <!-- 领导日程详细 -->
+        <activity
+            android:name=".homepage.activity.LeaderScheduleDetaileActivity"
+            android:screenOrientation="portrait" />
+        <!-- 审批 我发起的 -->
+        <activity
+            android:name=".approval.activity.MySponsorListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 我的抄送 -->
+        <activity
+            android:name=".approval.activity.MyCopyToListActivity"
+            android:screenOrientation="portrait" />
+        <!-- 我抄送的详情页面 -->
+        <activity
+            android:name=".approval.activity.MyCopyToDetailActivity"
+            android:screenOrientation="portrait" />
+        <!-- <activity android:name=".approval.activity.MyApprovalListActivity"> -->
+        <!-- </activity> -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <!-- 选择抄送人 -->
+        <!-- 新版本选择抄送人 -->
+        <activity
+            android:name=".approval.activity.ChooseCopyToActivity"
+            android:screenOrientation="portrait" />
+        <!-- 跳转督办Activity -->
+        <activity
+            android:name=".supervision.activity.SupervisionActivity"
+            android:screenOrientation="portrait" />
+        <!-- 督办详细 -->
+        <activity
+            android:name=".supervision.activity.SupervisionDetailActivity"
+            android:screenOrientation="portrait" />
+        <!-- 督办详细 -->
+        <activity
+            android:name=".supervision.activity.SupervisionSearchDetailActivity"
+            android:screenOrientation="portrait" />
+        <!-- 添加督办 -->
+        <activity
+            android:name=".supervision.activity.AddSupervisionActivity"
+            android:screenOrientation="portrait" />
+        <!-- 反馈信息列表页面 -->
+        <activity
+            android:name=".supervision.activity.BeSupervisedPersonFeedBackListActivity"
+            android:screenOrientation="portrait" />
+        <!-- 添加反馈信息界面 -->
+        <activity
+            android:name=".supervision.activity.AddFeedBackActivity"
+            android:screenOrientation="portrait" />
+        <!-- 督办编辑页面 -->
+        <activity
+            android:name=".supervision.activity.EditSupervisionActivity"
+            android:screenOrientation="portrait" />
+        <!-- 点击推送过来的通知后的详情展示页面 -->
+        <activity
+            android:name=".push.activity.PushDetailActivity"
+            android:screenOrientation="portrait" />
+        <!-- 选择被督办人界面 -->
+        <activity
+            android:name=".supervision.activity.ChooseSupervisionActivity"
+            android:screenOrientation="portrait" />
+        <!-- 新版本会议主页面 -->
+        <activity
+            android:name=".meeting_new.activity.MeetingMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 申请会议室界面 -->
+        <activity
+            android:name=".meeting_new.activity.ApplyMeetingRoomActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 编辑会议室信息界面 -->
+        <activity
+            android:name=".meeting_new.activity.ApplyMeetingRoomEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 申请会议室 -->
+        <activity
+            android:name=".meeting_new.activity.ApplyMeetingRoomApplyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 会议    我发起的 -->
+        <activity
+            android:name=".meeting_new.activity.MeetingMySponsorListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- 会议室申请列表详情页面 -->
+        <activity
+            android:name=".meeting_new.activity.ApplyMeetingRoomDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!--会议详情界面-->
+        <activity
+            android:name=".meeting_new.activity.MeetingNewDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!--会议签到详情页面-->
+        <activity
+            android:name=".meeting_new.activity.MeetingSignDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- 发布会议填写信息界面 -->
+        <activity
+            android:name=".meeting_new.activity.MeetingPublishDoPublishActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!--发布会议列表界面-->
+        <activity
+            android:name=".meeting_new.activity.ReleaseMeetingMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!--会议签到页列表-->
+        <activity
+            android:name=".meeting_new.activity.RegistrationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!--我参与的会议列表-->
+        <activity
+            android:name=".meeting_new.activity.MeetingMyParticipationListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!--我审核的会议列表-->
+        <activity
+            android:name=".meeting_new.activity.MyCheckedApplyMeetingRoomActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!--我审核的会议列表 详情界面-->
+        <activity
+            android:name=".meeting_new.activity.MyCheckedMeetingRoomDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!--从参会人员中选择参加议题的人员-->
+        <activity
+            android:name=".meeting_new.activity.TopicParticipantActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+    </application>
+
+</manifest>

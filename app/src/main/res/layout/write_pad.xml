@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_circle_corner_bg_white"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/tablet_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="@dimen/distance_10dp"
+        android:layout_marginTop="@dimen/distance_10dp"
+        android:background="@android:color/transparent" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/distance_25dp"
+        android:background="#ffffff"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/write_pad_clear"
+                android:layout_width="@dimen/width_120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/distance_15dp"
+                android:background="@drawable/shape_circle_corner_btn_white"
+                android:text="@string/approval_sign_rewrite"
+                android:textColor="@color/department_color"
+                android:textSize="@dimen/font_size_15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/write_pad_ok"
+                android:layout_width="@dimen/width_120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/distance_15dp"
+                android:background="@drawable/shape_circle_corner_btn_blue"
+                android:text="@string/approval_sign_complete"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_15sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/write_pad_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/selsector_blue_white_button"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:textColor="@drawable/selector_blue_btn_text_color"
+            android:visibility="gone" />
+        />
+    </LinearLayout>
+
+</LinearLayout>

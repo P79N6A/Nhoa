@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wisdom.nhoa.metting.activity.MeetingDetailsActivity">
+
+
+    <include
+        android:id="@+id/head_title"
+        layout="@layout/head_title_bar" />
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/head_title"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_eff1fd"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_15dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:text="@string/index_meeting_meeting_theme"
+                android:textColor="@color/textcolor"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_meeting_theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:editable="false"
+                android:focusable="false"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_10dp"
+                android:paddingRight="@dimen/distance_10dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:text=""
+                android:textColor="@color/textcolor"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/grey_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_eff1fd"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_15dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:text="@string/index_meeting_room"
+                android:textColor="@color/textcolor"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_meeting_room"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:editable="false"
+                android:focusable="false"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_10dp"
+                android:paddingRight="@dimen/distance_10dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:text=""
+                android:textColor="@color/blue_home_tab_text"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/grey_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_eff1fd"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_15dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:text="@string/meeting_participate_num"
+                android:textColor="@color/textcolor"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_meeting_participate_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:editable="false"
+                android:focusable="false"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_10dp"
+                android:paddingRight="@dimen/distance_10dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:text=""
+                android:textColor="@color/textcolor"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/grey_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_eff1fd"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_15dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:text="@string/index_meeting_start_time"
+                android:textColor="@color/textcolor"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_start_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:editable="false"
+                android:focusable="false"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_10dp"
+                android:paddingRight="@dimen/distance_10dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:text=""
+                android:textColor="@color/textcolor"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/grey_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_eff1fd"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_15dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:text="@string/index_meeting_end_time"
+                android:textColor="@color/textcolor"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_end_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:editable="false"
+                android:focusable="false"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_10dp"
+                android:paddingRight="@dimen/distance_10dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:text=""
+                android:textColor="@color/textcolor"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/grey_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_eff1fd"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_15dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:text="@string/meeting_apply_time"
+                android:textColor="@color/textcolor"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_meeting_apply_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:editable="false"
+                android:focusable="false"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_10dp"
+                android:paddingRight="@dimen/distance_10dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:text=""
+                android:textColor="@color/textcolor"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/grey_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_eff1fd"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_15dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:text="@string/meeting_check_state"
+                android:textColor="@color/textcolor"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_current_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:editable="false"
+                android:focusable="false"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_10dp"
+                android:paddingRight="@dimen/distance_10dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:text=""
+                android:textColor="@color/textcolor"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/grey_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom"
+        android:layout_below="@+id/ll_top"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/font_size_20dp">
+
+        <TextView
+            android:id="@+id/tv_hint_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/meeting_room_detail_hint_return"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/font_size_16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_hint_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/meeting_room_detail_hint_pass"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/font_size_16sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_meeting_apply_delete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_weight="2"
+            android:background="@color/color_cccccc"
+            android:text="@string/meeting_apply_delete"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_18sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/bt_meeting_apply_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="#4edb6f"
+            android:text="@string/meeting_apply_edit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_18sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

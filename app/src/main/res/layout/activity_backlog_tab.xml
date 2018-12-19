@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/head_title_bar" />
+
+    <RadioGroup
+        android:id="@+id/rg_tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_50dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_read"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_f2f2f2"
+            android:button="@null"
+            android:gravity="center"
+            android:text="发文待办"
+            android:textColor="@color/selector_radiobutton_text_blue_white"
+            android:textSize="@dimen/textsize_16sp" />
+
+        <RadioButton
+            android:id="@+id/rb_un_read"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_f2f2f2"
+            android:button="@null"
+            android:gravity="center"
+            android:text="收文待办"
+            android:textColor="@color/selector_radiobutton_text_blue_white"
+            android:textSize="@dimen/textsize_16sp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_2dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:id="@+id/ll_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lv_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_no_data"
+            android:visibility="gone"
+            android:textSize="@dimen/font_size_18sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="暂无数据" />
+
+
+    </FrameLayout>
+
+</LinearLayout>

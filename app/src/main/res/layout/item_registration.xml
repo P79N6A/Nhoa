@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+              android:orientation="vertical"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_60dp"
+
+        android:padding="@dimen/distance_10dp">
+
+        <ImageView
+            android:id="@+id/iv_tag"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/hyfb_s" />
+
+        <TextView
+            android:id="@+id/tv_meeting_subject"
+            android:autoSizeTextType="uniform"
+            android:layout_toLeftOf="@+id/img_QRcode"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_tag"
+            android:layout_marginRight="@dimen/distance_10dp"
+            android:gravity="center_vertical"
+            android:autoSizeMaxTextSize="@dimen/font_size_16sp"
+            android:autoSizeMinTextSize="@dimen/font_size_14sp"
+            android:maxLines="2"
+            android:layout_marginLeft="@dimen/distance_10dp"
+            android:ellipsize="end"
+            android:text=""
+            />
+        <ImageView
+            android:id="@+id/img_QRcode"
+            android:layout_width="@dimen/height_30dp"
+            android:layout_height="@dimen/height_30dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_state"
+            android:layout_marginRight="@dimen/distance_10dp" />
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="@dimen/distance_80dp"
+            android:layout_height="@dimen/distance_25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/color_f2f2f2"
+            android:text="已发布会议"
+            android:textColor="#2196f3"
+            android:gravity="center"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/color_f2f2f2"
+        />
+
+</LinearLayout>

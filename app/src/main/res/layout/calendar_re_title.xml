@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.67dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/view_bg"
+        android:id="@+id/top_line_view" />
+<TextView
+    android:id="@+id/tv_calendar_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/distance_15dp"
+    android:paddingTop="@dimen/distance_8dp"
+    android:paddingBottom="@dimen/distance_8dp"
+    android:text=""/>
+</LinearLayout>

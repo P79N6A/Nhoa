@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_banlishixiang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/distance_50dp"
+        android:layout_marginLeft="@dimen/distance_15dp"
+        android:layout_marginRight="@dimen/distance_15dp"
+        android:gravity="center_vertical"
+        android:text=""
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/font_size_15sp" />
+
+</LinearLayout>

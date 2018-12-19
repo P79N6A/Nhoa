@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_eff1fd"
+        android:padding="@dimen/distance_10dp">
+
+        <TextView
+            android:id="@+id/tv_group_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/distance_5dp"
+            android:text="@string/circulated_group_name"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/textsize_16sp" />
+
+        <EditText
+            android:id="@+id/circulated_et_group_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/distance_5dp"
+            android:layout_marginRight="@dimen/distance_5dp"
+            android:layout_toRightOf="@+id/tv_group_name"
+            android:background="@drawable/shape_circle_corner_small_bg_white"
+            android:gravity="center_vertical"
+            android:padding="@dimen/distance_5dp"
+            android:textSize="@dimen/textsize_16sp"
+
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_eff1fd"
+        android:padding="@dimen/distance_10dp">
+
+        <TextView
+            android:id="@+id/tv_group_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="@dimen/distance_5dp"
+            android:text="@string/circulated_group_notic"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/textsize_16sp" />
+
+        <EditText
+            android:id="@+id/circulated_et_group_notice"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_100dp"
+            android:layout_marginLeft="@dimen/distance_5dp"
+            android:textSize="@dimen/textsize_16sp"
+            android:layout_marginRight="@dimen/distance_5dp"
+            android:layout_toRightOf="@+id/tv_group_notice"
+            android:background="@drawable/shape_circle_corner_small_bg_white"
+            android:gravity="left|top"
+            android:padding="@dimen/distance_5dp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/circulated_create_group_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/distance_50dp" />
+
+        <TextView
+            android:id="@+id/circulated_tv_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/distance_50dp"
+            android:layout_gravity="bottom"
+            android:background="@color/department_color"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_18sp" />
+    </FrameLayout>
+</LinearLayout>

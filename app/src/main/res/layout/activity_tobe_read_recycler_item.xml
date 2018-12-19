@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:paddingTop="@dimen/distance_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/distance_10dp">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:id="@+id/ll_name"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/distance_10dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/file" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/distance_10dp"
+                android:layout_toRightOf="@+id/iv_head"
+                android:text="@string/circulated_group_notic"
+                android:textColor="@color/textcolor"
+                android:textSize="@dimen/textsize_16sp" />
+        </LinearLayout>
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/distance_10dp"
+            android:id="@+id/tv_upload_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/distance_10dp"
+            android:layout_below="@+id/ll_name"
+            android:layout_alignParentRight="true"
+            android:id="@+id/tv_group_name"
+            android:layout_width="160dp"
+            android:gravity="left"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/grey_line" />
+</LinearLayout>

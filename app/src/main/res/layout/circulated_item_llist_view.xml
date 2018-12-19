@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingRight="@dimen/distance_5dp">
+
+
+    <ImageView
+        android:id="@+id/img_head"
+        android:layout_width="@dimen/width_40dp"
+        android:layout_height="@dimen/height_40dp"
+        android:layout_marginLeft="@dimen/distance_15dp"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/distance_10dp"
+        android:layout_marginBottom="@dimen/distance_10dp"
+        android:src="@mipmap/avatar_group" />
+
+    <TextView
+        android:id="@+id/circulated_tv_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/distance_15dp"
+        android:layout_marginTop="@dimen/distance_5dp"
+        android:layout_marginBottom="@dimen/distance_5dp"
+        android:layout_toRightOf="@+id/img_head"
+        android:text="大时代大时代大时代大时代大时代大时代大时代大时代大时代大时代大时代大时代"
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/textsize_16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignStart="@+id/tv_zhiwei"
+        android:layout_below="@+id/tv_zhiwei"
+        android:layout_marginBottom="@dimen/distance_10dp"
+        android:background="@color/view_bg" />
+
+</RelativeLayout>

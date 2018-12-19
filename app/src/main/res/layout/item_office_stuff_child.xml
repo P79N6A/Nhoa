@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<TextView
+    android:id="@+id/tv_office_stuff_child"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingTop="@dimen/distance_5dp"
+    android:paddingBottom="@dimen/distance_5dp"
+    android:background="@color/white"
+    android:textSize="@dimen/font_size_16sp"
+    android:textColor="@color/textcolor"
+    android:paddingRight="@dimen/distance_5dp"
+    android:paddingLeft="@dimen/distance_20dp"
+    android:text="办公用品"
+    />
+
+
+</LinearLayout>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/distance_5dp"
+    android:paddingBottom="@dimen/distance_5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/distance_10dp"
+        android:layout_marginRight="@dimen/distance_10dp"
+        android:background="@drawable/shape_cirle_coner_gray"
+        android:padding="@dimen/distance_10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/distance_30dp"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+        <com.wisdom.nhoa.widget.AutoFitTextView
+            android:id="@+id/tv_number"
+            android:layout_width="@dimen/distance_70dp"
+            android:textSize="@dimen/font_size_14sp"
+            android:textColor="@color/textcolor"
+            app:text="序号"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_number"
+            android:text=":" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_number_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/distance_10dp"
+            android:layout_toRightOf="@+id/tv_number"
+            android:textColor="@color/textcolor"
+            android:textSize="14dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <com.wisdom.nhoa.widget.AutoFitTextView
+            android:id="@+id/tv_name"
+            android:layout_width="@dimen/distance_70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_number"
+            android:textSize="@dimen/font_size_14sp"
+            android:textColor="@color/textcolor"
+            app:text="名称"
+            android:layout_marginTop="@dimen/distance_5dp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_number"
+            android:layout_marginTop="@dimen/distance_5dp"
+            android:layout_toRightOf="@+id/tv_name"
+            android:text=":" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_name_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_number_content"
+            android:layout_marginLeft="@dimen/distance_10dp"
+            android:layout_marginTop="@dimen/distance_5dp"
+            android:layout_toRightOf="@+id/tv_name"
+            android:textColor="@color/textcolor"
+            android:textSize="14dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <com.wisdom.nhoa.widget.AutoFitTextView
+            android:id="@+id/tv_begin_time"
+            android:layout_width="@dimen/distance_70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:textSize="@dimen/font_size_14sp"
+            android:textColor="@color/textcolor"
+            app:text="开始时间"
+            android:layout_marginTop="@dimen/distance_5dp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="@dimen/distance_5dp"
+            android:layout_toRightOf="@+id/tv_begin_time"
+            android:text=":" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_begin_time_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name_content"
+            android:layout_marginLeft="@dimen/distance_10dp"
+            android:layout_marginTop="@dimen/distance_5dp"
+            android:layout_toRightOf="@+id/tv_begin_time"
+            android:textColor="@color/textcolor"
+            android:textSize="14dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <com.wisdom.nhoa.widget.AutoFitTextView
+            android:id="@+id/tv_end_time"
+            android:layout_width="@dimen/distance_70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_begin_time"
+
+            android:textSize="@dimen/font_size_14sp"
+            android:textColor="@color/textcolor"
+            app:text="结束时间"
+            android:layout_marginTop="@dimen/distance_5dp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_begin_time"
+            android:layout_marginTop="@dimen/distance_5dp"
+            android:layout_toRightOf="@+id/tv_end_time"
+            android:text=":" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_end_time_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_begin_time_content"
+            android:layout_marginLeft="@dimen/distance_10dp"
+            android:layout_marginTop="@dimen/distance_5dp"
+            android:layout_toRightOf="@+id/tv_end_time"
+            android:textColor="@color/textcolor"
+            android:textSize="14dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <com.wisdom.nhoa.widget.AutoFitTextView
+            android:id="@+id/tv_status"
+            android:layout_width="@dimen/distance_70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_end_time"
+
+            android:textSize="@dimen/font_size_14sp"
+            android:textColor="@color/textcolor"
+            app:text="状态"
+            android:layout_marginTop="@dimen/distance_5dp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_end_time"
+            android:layout_marginTop="@dimen/distance_5dp"
+            android:layout_toRightOf="@+id/tv_status"
+            android:text=":" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_status_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_end_time_content"
+            android:layout_marginLeft="@dimen/distance_10dp"
+            android:layout_marginTop="@dimen/distance_5dp"
+            android:layout_toRightOf="@+id/tv_status"
+            android:textColor="@color/textcolor"
+            android:textSize="14dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <com.wisdom.nhoa.widget.AutoFitTextView
+            android:id="@+id/tv_progress"
+            android:layout_width="@dimen/distance_70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_status"
+
+            android:textSize="@dimen/font_size_14sp"
+            android:textColor="@color/textcolor"
+            app:text="进度"
+            android:layout_marginTop="@dimen/distance_5dp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_status"
+            android:layout_marginTop="@dimen/distance_5dp"
+            android:layout_toRightOf="@+id/tv_end_time"
+            android:text=":" />
+        <com.wisdom.nhoa.widget.CirclePrecentView
+            android:id="@+id/cp_view"
+            android:layout_width="@dimen/distance_20dp"
+            android:layout_height="@dimen/distance_20dp"
+            android:layout_below="@id/tv_status_content"
+            app:color="@color/color_40c1ff"
+            android:layout_marginLeft="@dimen/distance_10dp"
+            android:layout_marginTop="@dimen/distance_5dp"
+            android:layout_toRightOf="@+id/tv_status"
+            android:textColor="@color/textcolor"
+            android:textSize="14dp" />
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_progress_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_status_content"
+            android:layout_marginLeft="@dimen/distance_10dp"
+            android:layout_marginTop="@dimen/distance_5dp"
+            android:layout_toRightOf="@+id/cp_view"
+            android:textColor="@color/textcolor"
+            android:textSize="14dp" />
+        </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/distance_5dp"
+            android:src="@mipmap/arrow_sq"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

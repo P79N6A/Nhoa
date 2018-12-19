@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/head_title_bar"></include>
+
+    <ImageView
+        android:id="@+id/iv_app_icon"
+        android:layout_width="@dimen/width_50dp"
+        android:layout_height="@dimen/width_50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/distance_50dp"
+        android:src="@mipmap/logo" />
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="讷河市政府"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:textSize="@dimen/font_size_20sp"-->
+    <!--android:textColor="#333333"-->
+    <!--android:layout_marginTop="@dimen/distance_15dp"-->
+    <!--/>-->
+    <TextView
+        android:id="@+id/tv_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/distance_5dp"
+        android:text="政务OA办公系统"
+        android:textColor="#333333"
+        android:textSize="@dimen/font_size_20sp" />
+
+    <TextView
+        android:id="@+id/tv_app_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/distance_15dp"
+        android:textColor="#333333"
+        android:textSize="@dimen/font_size_18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_marginLeft="@dimen/distance_10dp"
+            android:layout_marginRight="@dimen/distance_10dp"
+            android:layout_marginTop="@dimen/distance_30dp"
+            android:background="@color/grey" />
+
+        <LinearLayout
+            android:id="@+id/ll_check"
+            android:paddingTop="@dimen/distance_10dp"
+            android:paddingBottom="@dimen/distance_10dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/distance_10dp"
+                android:text="检查新版本"
+                android:textColor="@color/textcolor"
+                android:textSize="@dimen/font_size_16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_marginLeft="@dimen/distance_10dp"
+            android:layout_marginRight="@dimen/distance_10dp"
+            android:background="@color/grey" />
+    </LinearLayout>
+</LinearLayout>

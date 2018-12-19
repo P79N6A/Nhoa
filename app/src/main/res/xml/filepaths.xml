@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<resources>-->
+    <!--<paths>-->
+        <!--<root-path path="HrbDownload" name="HrbDownLoad" />-->
+    <!--</paths>-->
+<!--</resources>-->
+<paths>
+    <root-path name="my_images" path="Android/data/com.wisdom.nhoa/files/Pictures" />
+</paths>

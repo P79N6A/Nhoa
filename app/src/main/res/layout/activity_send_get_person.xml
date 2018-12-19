@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.wisdom.nhoa.sendreceive.activity.SendGetPersonActivity">
+
+    <include
+        android:id="@+id/head_title"
+        layout="@layout/head_title_bar"/>
+
+    <ListView
+        android:id="@+id/lv_person"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bt_confirm"
+        android:layout_below="@+id/head_title"/>
+
+    <Button
+        android:id="@+id/bt_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/color_647aea"
+        android:text="@string/sendreceive_confirm"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_16sp"/>
+</RelativeLayout>

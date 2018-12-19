@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Textview两端对齐的自定义属性-->
+    <declare-styleable name="AlignTextView">
+        <!-- 文本-->
+        <attr name="text" format="string"/>
+        <!-- 后缀符号类型:全角、半角-->
+        <attr name="suffixMode" format="enum">
+            <enum name="full_width" value="1"/>
+            <enum name="half_width" value="2"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="CirclePrecentView">
+        <attr name="color" format="color" ></attr>
+        <attr name="precent" format="integer"></attr>
+        <attr name="radius" format="dimension" ></attr>
+        <attr name="backgroundcolor" format="color"></attr>
+    </declare-styleable>
+    <declare-styleable name="DefinedCircle">
+        <attr name="circleradius" format="dimension|reference"></attr>
+        <attr name="circrlcolor" format="color|reference"></attr>
+    </declare-styleable>
+    <declare-styleable name="FloatingActionButton">
+        <attr name="fab_colorPressed" format="color"/>
+        <attr name="fab_colorDisabled" format="color"/>
+        <attr name="fab_colorNormal" format="color"/>
+        <attr name="fab_icon" format="reference"/>
+        <attr name="fab_size" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="mini" value="1"/>
+        </attr>
+        <attr name="fab_title" format="string"/>
+        <attr name="fab_stroke_visible" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="AddFloatingActionButton">
+        <attr name="fab_plusIconColor" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="FloatingActionsMenu">
+    <attr name="fab_addButtonColorPressed" format="color"/>
+    <attr name="fab_addButtonColorNormal" format="color"/>
+    <attr name="fab_addButtonSize" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="mini" value="1"/>
+    </attr>
+    <attr name="fab_addButtonPlusIconColor" format="color"/>
+    <attr name="fab_addButtonStrokeVisible" format="boolean"/>
+    <attr name="fab_labelStyle" format="reference"/>
+    <attr name="fab_labelsPosition" format="enum">
+        <enum name="left" value="0"/>
+        <enum name="right" value="1"/>
+    </attr>
+        <attr name="fab_expandDirection" format="enum">
+            <enum name="up" value="0"/>
+            <enum name="down" value="1"/>
+            <enum name="left" value="2"/>
+            <enum name="right" value="3"/>
+        </attr>
+    </declare-styleable>
+</resources>

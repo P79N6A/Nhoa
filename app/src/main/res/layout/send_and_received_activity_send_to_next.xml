@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_title_bar" />
+
+    <RadioGroup
+        android:id="@+id/rg_tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_50dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_next"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_f2f2f2"
+            android:button="@null"
+            android:gravity="center"
+            android:text="发送下一环节"
+            android:textColor="@color/selector_radiobutton_text_blue_white"
+            android:textSize="@dimen/textsize_16sp" />
+
+        <RadioButton
+            android:id="@+id/rb_complete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_f2f2f2"
+            android:button="@null"
+            android:gravity="center"
+            android:text="办结"
+            android:textColor="@color/selector_radiobutton_text_blue_white"
+            android:textSize="@dimen/textsize_16sp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/ll_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_2dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:id="@+id/ll_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lv_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/btn_complete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/distance_20dp"
+            android:layout_marginRight="@dimen/distance_20dp"
+            android:background="@drawable/shape_circle_corner_btn_blue"
+            android:text="办  结"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_18sp"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

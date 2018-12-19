@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_title_bar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lv_feedback_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/distance_50dp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/distance_50dp"
+            android:layout_gravity="bottom"
+            android:background="@color/department_color"
+            android:gravity="center"
+            android:text="@string/superversion_feed_back_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_18sp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center"
+            >
+            <TextView
+                android:id="@+id/tv_no_data"
+                android:visibility="gone"
+                android:textSize="@dimen/font_size_18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无数据"
+                />
+
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

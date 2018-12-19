@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_title_bar" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_30dp"
+        android:layout_marginLeft="@dimen/distance_15dp"
+        android:layout_marginRight="@dimen/distance_15dp"
+        android:layout_marginTop="@dimen/distance_10dp"
+        android:background="@drawable/addressbook_search_bg"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/distance_10dp"
+            android:drawableLeft="@mipmap/search"
+            android:gravity="center"
+            android:text="搜索" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/distance_15dp"
+        android:layout_marginRight="@dimen/distance_15dp"
+        android:layout_marginTop="@dimen/distance_12dp"
+        android:background="@drawable/shape_grey_corner">
+
+        <TextView
+            android:id="@+id/tv_orgnization"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/distance_10dp"
+            android:layout_marginRight="@dimen/distance_10dp"
+            android:layout_marginTop="@dimen/distance_12dp"
+            android:drawableLeft="@mipmap/icon_badge"
+            android:drawablePadding="6dp"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/font_size_18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_orgnization"
+            android:layout_marginBottom="@dimen/distance_12dp"
+            android:layout_marginRight="@dimen/distance_12dp"
+            android:drawableLeft="@mipmap/icon_form"
+            android:drawablePadding="6dp"
+            android:drawableRight="@mipmap/arrow_blue"
+            android:text="组织架构"
+            android:textColor="@color/light_blue_new" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/distance_15dp"
+        android:layout_marginTop="@dimen/distance_10dp"
+        android:text="常用联系人"
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/textsize_16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/width_2dp"
+        android:background="@color/grey_line" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ListView
+            android:id="@+id/lv_contact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/distance_10dp"
+            android:divider="@null" />
+
+        <TextView
+            android:id="@+id/tv_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/distance_20dp"
+            android:gravity="center"
+            android:text="暂无最近联系人"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/font_size_18sp"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

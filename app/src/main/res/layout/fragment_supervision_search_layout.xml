@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.wisdom.nhoa.widget.PullToRefreshLayout
+            android:id="@+id/ptr_refresh_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/refresh_head" />
+            <!-- 支持所有实现Pullable接口的View -->
+            <com.wisdom.nhoa.widget.PullableListView
+                android:divider="@null"
+                android:id="@+id/ptr_ListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:listSelector="@android:color/transparent"
+                android:groupIndicator="@null" />
+
+            <include layout="@layout/load_more" />
+        </com.wisdom.nhoa.widget.PullToRefreshLayout>
+        <!--<include-->
+        <!--android:id="@+id/load_item"-->
+        <!--layout="@layout/include_layout_load_fail"-->
+        <!--android:visibility="gone"/>-->
+        <!--<include-->
+        <!--android:id="@+id/load_nodata"-->
+        <!--layout="@layout/include_layout_nodata"-->
+        <!--android:visibility="gone"/>-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center"
+            >
+            <TextView
+                android:id="@+id/tv_no_data"
+                android:visibility="gone"
+                android:textSize="@dimen/font_size_18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无数据"
+                />
+            <TextView
+                android:visibility="gone"
+                android:textSize="@dimen/font_size_18sp"
+                android:id="@+id/tv_error_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="加载出错请重试"
+                />
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+</LinearLayout>
